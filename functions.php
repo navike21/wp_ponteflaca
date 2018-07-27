@@ -68,7 +68,6 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 // Cargar Hojas de estilos
-
 function custom_css(){
   wp_enqueue_style('bastemp', "http://bastemp.com/css/bastemp.min.css", false, '1.1.2', 'all');
   wp_enqueue_style('slick', get_bloginfo('template_url')."/assets/plugins/slick/slick.css", false, '1', 'all');
@@ -125,9 +124,7 @@ function custom_logo() {
 add_action( 'after_setup_theme', 'custom_logo' );
 
 
-/**
- * SECTION INFO FOOTER
- **/
+//SECTION INFO FOOTER
 function info_footer() {
 	register_sidebar( array(
 		'name'          => 'Footer Information',
@@ -139,9 +136,8 @@ function info_footer() {
 	) );
 }
 add_action( 'widgets_init', 'info_footer' );
-/**
- * SECTION CREDITS FOOTER
- **/
+
+//SECTION CREDITS FOOTER
 function credits() {
 	register_sidebar( array(
 		'name'          => 'Credits Footer',
@@ -154,7 +150,47 @@ function credits() {
 }
 add_action( 'widgets_init', 'credits' );
 
-// Equipo
+
+//Titulo de servicios
+function servicios_title() {
+	register_sidebar( array(
+		'name'          => 'Title servicios',
+		'id'            => 'servicios_title',
+		'before_widget' => '<section class="fondo_blanco section_top_center w_100">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'servicios_title' );
+
+//Te brindamos
+function brindamos_title() {
+	register_sidebar( array(
+		'name'          => 'Brindamos',
+		'id'            => 'brindamos_title',
+		'before_widget' => '<section class="brindamos section_middle_center">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'brindamos_title' );
+
+//Titulo de blog
+function blog_title() {
+	register_sidebar( array(
+		'name'          => 'Title blog',
+		'id'            => 'blog_title',
+		'before_widget' => '<section class="section_top_center w_100">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="w_80 align_center">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'blog_title' );
+
+//Equipo
 add_action( 'init', 'custom_page_equipo' );
 function custom_page_equipo() {
 	$label_equipo = array(
@@ -187,40 +223,72 @@ function custom_page_equipo() {
  
     register_post_type( 'equipo', $args_equipo ); /* Registramos y a funcionar */
 }
-
-  // Blog
-  // add_action( 'init', 'custom_page_blog' );
-  // function custom_page_blog() {
-  // 	$label_blog = array(
-  // 	      'name'                  => _x( 'Blog', 'post type general name' ),
-  //         'singular_name'         => _x( 'Blog', 'post type singular name' ),
-  //         'add_new'               => _x( 'Add new Item', 'book' ),
-  //         'add_new_item'          => __( 'Add new Item' ),
-  //         'edit_item'             => __( 'Edit Item' ),
-  //         'new_item'              => __( 'New Item' ),
-  //         'view_item'             => __( 'See Item' ),
-  //         'search_items'          => __( 'Search Item' ),
-  //         'not_found'             => __( 'Item not found' ),
-  //         'not_found_in_trash'    => __( 'Item not found in the trash' ),
-  //         'parent_item_colon'     => ''
-  //     );
-  
-  //     // Creamos un array para $args
-  //     $args_blog = array( 'labels' => $label_blog,
-  //         'public'                => true,
-  //         'publicly_queryable'    => true,
-  //         'show_ui'               => true,
-  //         'query_var'             => true,
-  //         'rewrite'               => true,
-  //         'menu_icon'             => 'dashicons-format-status',
-  //         'capability_type'       => 'post',
-  //         'hierarchical'          => false,
-  //         'menu_position'         => null,
-  //         'supports'              => array( 'title','editor', 'thumbnail' )
-  //     );
-  
-  //     register_post_type( 'blog', $args_blog ); /* Registramos y a funcionar */
-  // }
+// SLIDER
+add_action( 'init', 'custom_page_slider' );
+function custom_page_slider() {
+	$label_slider = array(
+	    'name'                  => _x( 'Slider home', 'post type general name' ),
+        'singular_name'         => _x( 'Slider', 'post type singular name' ),
+        'add_new'               => _x( 'Add new Slider', 'book' ),
+        'add_new_item'          => __( 'Add new Slider' ),
+        'edit_item'             => __( 'Edit Slider' ),
+        'new_item'              => __( 'New Slider' ),
+        'view_item'             => __( 'See Slider' ),
+        'search_items'          => __( 'Search Slider' ),
+        'not_found'             => __( 'Slider not found' ),
+        'not_found_in_trash'    => __( 'Slider not found in the trash' ),
+        'parent_item_colon'     => ''
+    );
+ 
+    // Creamos un array para $args
+    $args_slider = array( 'labels' => $label_slider,
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'query_var'             => true,
+        'rewrite'               => true,
+        'menu_icon'             => 'dashicons-images-alt2',
+        'capability_type'       => 'post',
+        'hierarchical'          => false,
+        'menu_position'         => null,
+        'supports'              => array( 'title', 'thumbnail' )
+    );
+ 
+    register_post_type( 'slider', $args_slider ); /* Registramos y a funcionar */
+}
+// Servicios
+add_action( 'init', 'custom_page_servicios' );
+function custom_page_servicios() {
+	$label_servicios = array(
+	      'name'                  => _x( 'Servicios', 'post type general name' ),
+        'singular_name'         => _x( 'Servicios', 'post type singular name' ),
+        'add_new'               => _x( 'Add new Item', 'book' ),
+        'add_new_item'          => __( 'Add new Item' ),
+        'edit_item'             => __( 'Edit Item' ),
+        'new_item'              => __( 'New Item' ),
+        'view_item'             => __( 'See Item' ),
+        'search_items'          => __( 'Search Item' ),
+        'not_found'             => __( 'Item not found' ),
+        'not_found_in_trash'    => __( 'Item not found in the trash' ),
+        'parent_item_colon'     => ''
+    );
+ 
+    // Creamos un array para $args
+    $args_servicios = array( 'labels' => $label_servicios,
+        'public'                => true,
+        'publicly_queryable'    => true,
+        'show_ui'               => true,
+        'query_var'             => true,
+        'rewrite'               => true,
+        'menu_icon'             => 'dashicons-welcome-learn-more',
+        'capability_type'       => 'post',
+        'hierarchical'          => false,
+        'menu_position'         => null,
+        'supports'              => array( 'title','editor', 'thumbnail' )
+    );
+ 
+    register_post_type( 'servicios', $args_servicios ); /* Registramos y a funcionar */
+}
 
 
 ?>

@@ -1,22 +1,22 @@
 <!-- Archivo de cabecera gobal de Wordpress -->
-<?php get_header(); ?>
-<!-- Contenido del post -->
-<?php if ( have_posts() ) : the_post(); ?>
-  <section>
-      <header>
-        <h1><?php the_title(); ?></h1>
-        <time datatime="<?php the_time('Y-m-j'); ?>"><?php the_time('j F, Y'); ?></time>
-        <?php the_category (); ?>
-      </header>
-      <?php the_content(); ?>
-      <address>Por <?php the_author_posts_link() ?></address>
-      <!-- Comentarios -->
-      <?php comments_template(); ?>
-  </section>
-<?php else : ?>
-  <p><?php _e('Ups!, esta entrada no existe.'); ?></p>
-<?php endif; ?>
-<!-- Archivo de barra lateral por defecto -->
-<?php get_sidebar(); ?>
-<!-- Archivo de pié global de Wordpress -->
-<?php get_footer(); ?>
+<?php 
+  get_header(); 
+
+  if ( have_posts() ) : the_post(); 
+    echo '<section class="habitos section_middle_center w_100 ">';
+      the_title('<h2>', '</h2>');
+      echo '<section class="section_top_center w_90 portadas_blog parallax-container" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="'; the_post_thumbnail_url(); echo '">'; 
+      echo '</section>';
+      echo '<article class="section_top_justify w_80">';
+        echo '<div>';
+          the_content();
+        echo '</div>';
+        echo '<div class="section_bottom_center w_100">';
+          echo '<a href="'; the_permalink(); echo'">Enviar'; echo '</a>';
+        echo '<div>';
+      echo '</article>';
+    echo '</section>';
+  endif;    
+
+  get_footer(); 
+?>
