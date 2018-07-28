@@ -1,9 +1,9 @@
 <?php
     /*Template Name: Equipo Template */
     get_header();
-        if ( have_posts() ) : the_post();
+    if ( have_posts() ) : the_post();
         echo '<section class="conoce_ponteFlaca section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="bottom" data-image-src="'; the_post_thumbnail_url(); echo '">';   
-            echo '<div>';
+            echo '<div class="conoce_ponteFlaca section_middle_center">';
                 the_content();
             echo '</div>';
         echo '</section>';
@@ -25,8 +25,11 @@
                 // echo $image[0];
 
                 echo '<section class="conoce_ponteFlaca section_top_center">';
-                echo '<img src="'.$image[0].'">';
                 echo '<article class="section_top_center">';
+                    echo '<div class="perfil_team section_middle_center">';
+                        echo '<img src="'.$image[0].'">';
+                    echo '</div>';
+                    echo '<p>&nbsp;</p>';
                         the_title('<h3>', '</h3>');
                         the_content();
                     echo '</article>';
@@ -34,6 +37,6 @@
             // }
         endwhile;
         
-        endif;
+    endif;
         get_footer();
 ?>

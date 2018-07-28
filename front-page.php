@@ -6,10 +6,21 @@
             $src = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'thumbnail_size' );
             $urlImage = $src[0];
             if ( has_post_thumbnail() ){  
-                echo '<div class="img_fondo item" data-image="'.$urlImage.'"></div>';
-            }
+                echo '<div class="img_fondo item" data-image="'.$urlImage.'">';
+                  echo '<div class="section_middle_center w_100 full_min_h">';
+                    if ( is_active_sidebar( 'slider_title' ) ) {
+                        dynamic_sidebar( 'slider_title' );
+                    }
+                  echo '</div>';
+                echo '</div>';
+            }     
         endwhile;
   echo '</section>';
+  
+  // echo '<section class="section_middle_center w_100 team">';
+  //       echo '<a href="team.php" data-minwidth="250">';
+  //       echo '</a>';
+  // echo '</section>';
 
   echo '<section class="fondo_blanco section_top_center w_100">';
         if ( is_active_sidebar( 'servicios_title' ) ) {

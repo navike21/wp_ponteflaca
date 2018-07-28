@@ -72,7 +72,7 @@ function custom_css(){
   wp_enqueue_style('bastemp', "http://bastemp.com/css/bastemp.min.css", false, '1.1.2', 'all');
   wp_enqueue_style('slick', get_bloginfo('template_url')."/assets/plugins/slick/slick.css", false, '1', 'all');
   wp_enqueue_style('slick-theme', get_bloginfo('template_url')."/assets/plugins/slick/slick-theme.css", false, '1', 'all');
-  wp_enqueue_style('style', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.2.0', 'all');
+  wp_enqueue_style('style', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.4.1', 'all');
 }
 add_action('wp_print_styles', 'custom_css');
 
@@ -104,7 +104,7 @@ function custom_scripts() {
     wp_enqueue_script( 'instafeed' );
   // Registramos js
 	wp_deregister_script( 'js' );
-	wp_register_script( 'js', get_bloginfo('template_url').'/assets/js/ready.min.js', false, '1.0.3', false );
+	wp_register_script( 'js', get_bloginfo('template_url').'/assets/js/ready.min.js', false, '1.0.4', false );
 	wp_enqueue_script( 'js' );
 
 }
@@ -182,10 +182,10 @@ function blog_title() {
 	register_sidebar( array(
 		'name'          => 'Title blog',
 		'id'            => 'blog_title',
-		'before_widget' => '<section class="section_top_center w_100">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="w_80 align_center">',
-		'after_title'   => '</h2>',
+		'before_widget' => '<div class="section_middle_center full_min_h title_blog">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="w_80 align_center">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'blog_title' );
@@ -290,6 +290,17 @@ function custom_page_servicios() {
     register_post_type( 'servicios', $args_servicios ); /* Registramos y a funcionar */
 }
 
-
+//Titulo slider
+function slider_title() {
+	register_sidebar( array(
+		'name'          => 'Title slider',
+		'id'            => 'slider_title',
+		'before_widget' => '<section class="section_top_center w_100">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'slider_title' );
 ?>
 
