@@ -19,6 +19,7 @@
   
   // echo '<section class="section_middle_center w_100 team">';
   //       echo '<a href="team.php" data-minwidth="250">';
+         
   //       echo '</a>';
   // echo '</section>';
 

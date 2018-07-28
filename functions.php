@@ -223,7 +223,7 @@ function custom_page_equipo() {
  
     register_post_type( 'equipo', $args_equipo ); /* Registramos y a funcionar */
 }
-// SLIDER
+// SLIDER home
 add_action( 'init', 'custom_page_slider' );
 function custom_page_slider() {
 	$label_slider = array(
@@ -293,7 +293,7 @@ function custom_page_servicios() {
 //Titulo slider
 function slider_title() {
 	register_sidebar( array(
-		'name'          => 'Title slider',
+		'name'          => 'Titulo slider',
 		'id'            => 'slider_title',
 		'before_widget' => '<section class="section_top_center w_100">',
 		'after_widget'  => '</section>',
@@ -302,5 +302,18 @@ function slider_title() {
 	) );
 }
 add_action( 'widgets_init', 'slider_title' );
-?>
 
+//Titulo equipo
+function equipo_title() {
+	register_sidebar( array(
+		'name'          => 'Titulo equipo',
+		'id'            => 'equipo_title',
+		'before_widget' => '<div class="conoce_ponteFlaca section_middle_center">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'equipo_title' );
+
+?>
