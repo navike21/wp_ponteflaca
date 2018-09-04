@@ -3,11 +3,11 @@
     get_header();
     if ( have_posts() ) : the_post();
         echo '<section class="conoce_ponteFlaca section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="bottom" data-image-src="'; the_post_thumbnail_url(); echo '">';   
-            echo '<div class="conoce_ponteFlaca section_middle_center">';
+            // echo '<div class="conoce_ponteFlaca section_middle_center">';
                     if ( is_active_sidebar( 'equipo_title' ) ) {
                     dynamic_sidebar( 'equipo_title' );
                 }  
-            echo '</div>';
+            // echo '</div>';
         echo '</section>';
         $loop = new WP_Query( 
             array( 

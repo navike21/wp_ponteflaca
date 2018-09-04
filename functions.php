@@ -70,9 +70,10 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 // Cargar Hojas de estilos
 function custom_css(){
   wp_enqueue_style('bastemp', "http://bastemp.com/css/bastemp.min.css", false, '1.1.2', 'all');
+  wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", false, '1', 'all');
   wp_enqueue_style('slick', get_bloginfo('template_url')."/assets/plugins/slick/slick.css", false, '1', 'all');
   wp_enqueue_style('slick-theme', get_bloginfo('template_url')."/assets/plugins/slick/slick-theme.css", false, '1', 'all');
-  wp_enqueue_style('style', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.4.1', 'all');
+  wp_enqueue_style('style', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.4.6', 'all');
 }
 add_action('wp_print_styles', 'custom_css');
 
@@ -88,6 +89,10 @@ function custom_scripts() {
 	wp_register_script( 'bastemp', 'http://bastemp.com/js/bastemp.min.js', false, '1.1.2', false );
 	wp_enqueue_script( 'bastemp' );
 
+  // Registramos Aos
+	wp_deregister_script( 'aos' );
+	wp_register_script( 'aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', false, '1', false );
+	wp_enqueue_script( 'aos' );
   // Registramos slick
 	wp_deregister_script( 'slick' );
 	wp_register_script( 'slick', get_bloginfo('template_url').'/assets/plugins/slick/slick.min.js', false, '1', false );
@@ -104,7 +109,7 @@ function custom_scripts() {
     wp_enqueue_script( 'instafeed' );
   // Registramos js
 	wp_deregister_script( 'js' );
-	wp_register_script( 'js', get_bloginfo('template_url').'/assets/js/ready.min.js', false, '1.0.4', false );
+	wp_register_script( 'js', get_bloginfo('template_url').'/assets/js/ready.min.js', false, '1.0.5', false );
 	wp_enqueue_script( 'js' );
 
 }
@@ -158,7 +163,7 @@ function servicios_title() {
 		'id'            => 'servicios_title',
 		'before_widget' => '<section class="fondo_blanco section_top_center w_100">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2>',
+		'before_title'  => '<h2 class="w_80 align_center" data-aos-delay="300" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">',
 		'after_title'   => '</h2>',
 	) );
 }
@@ -168,9 +173,10 @@ add_action( 'widgets_init', 'servicios_title' );
 function brindamos_title() {
 	register_sidebar( array(
 		'name'          => 'Brindamos',
-		'id'            => 'brindamos_title',
-		'before_widget' => '<section class="brindamos section_middle_center">',
-		'after_widget'  => '</section>',
+    'id'            => 'brindamos_title',
+    'description'   => 'Lista que ofrecemos al público',
+		'before_widget' => '<article class="section_middle_center" data-aos-delay="300" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">',
+    'after_widget'  => '</article>',
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 	) );
@@ -182,10 +188,10 @@ function blog_title() {
 	register_sidebar( array(
 		'name'          => 'Title blog',
 		'id'            => 'blog_title',
-		'before_widget' => '<div class="section_middle_center full_min_h title_blog">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="w_80 align_center">',
-		'after_title'   => '</h3>',
+		'before_widget' => '<section class="blog section_top_center w_100">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="w_80 align_center" data-aos-delay="300" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">',
+		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'blog_title' );
@@ -290,19 +296,6 @@ function custom_page_servicios() {
     register_post_type( 'servicios', $args_servicios ); /* Registramos y a funcionar */
 }
 
-//Titulo slider
-function slider_title() {
-	register_sidebar( array(
-		'name'          => 'Titulo slider',
-		'id'            => 'slider_title',
-		'before_widget' => '<section class="section_top_center w_100">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'slider_title' );
-
 //Titulo equipo
 function equipo_title() {
 	register_sidebar( array(
@@ -315,5 +308,19 @@ function equipo_title() {
 	) );
 }
 add_action( 'widgets_init', 'equipo_title' );
+
+//portada_blog
+function portada_blog() {
+	register_sidebar( array(
+		'name'          => 'Portada Blog',
+		'id'            => 'portada_blog',
+		'before_widget' => '<section class="section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="images/images_wp/sliderBLOG.jpg">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'portada_blog' );
+
 
 ?>

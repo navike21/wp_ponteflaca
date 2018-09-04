@@ -265,10 +265,13 @@ body {
     text-align: center;
     font-size: 3.5rem;
   }
+  .brindamos article .textwidget {
+    width: 70%;
+  }
   .brindamos article ul {
     list-style: disc;
     margin-left: 3vw;
-    width: 70%;
+    width: 100%;
   }
   .brindamos article ul li {
     color: #ffffff;
@@ -283,10 +286,13 @@ body {
     font-size: 10rem;
   }
 
+  .blog .textwidget {
+    width: 80%;
+  }
   .blog h3 {
     font-size: 2.5rem;
     margin: 0;
-    width: 80%;
+    width: 100%;
     text-align: center;
     color: #91c100;
   }
@@ -340,6 +346,9 @@ body {
   .conoce_ponteFlaca div {
     width: 50%;
   }
+  .conoce_ponteFlaca .textwidget {
+    width: 100%;
+  }
   .conoce_ponteFlaca h2 {
     color: #434040;
     font-size: 5rem;
@@ -376,7 +385,7 @@ body {
     border-radius: 50%;
   }
   .conoce_ponteFlaca article {
-    margin-bottom: 5vh;
+    margin: 8vh 0;
   }
   .conoce_ponteFlaca article h3 {
     font-size: 3rem;
@@ -608,12 +617,16 @@ body {
     position: fixed;
     right: 2vw;
     bottom: 2vw;
-    z-index: 50;
+    z-index: 99;
     width: 3vw;
   }
   .whatsapp img {
     width: 100%;
     height: auto;
+  }
+
+  .up svg {
+    height: 20px;
   }
 }
 @media all and (min-width: 760px) {
@@ -749,7 +762,7 @@ body {
   }
   .conoce_ponteFlaca article {
     width: 60%;
-    margin-bottom: 3vw;
+    margin: 3vw 0;
   }
   .conoce_ponteFlaca article h3 {
     font-size: 8rem;
@@ -788,6 +801,14 @@ body {
   .brindamos article::after {
     background-image: url(../images/brindamos-right.svg);
     right: -25%;
+  }
+
+  .portada_blog {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
   }
 
   .title_blog h3 {
@@ -926,6 +947,10 @@ body {
 
   .whatsapp:hover {
     transform: scale(1.1);
+  }
+
+  .up svg {
+    height: 2.5vw;
   }
 }
 @media all and (min-width: 1280px) {
