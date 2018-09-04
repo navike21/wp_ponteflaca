@@ -13,7 +13,17 @@ $(document).ready(function() {
         parallax_home();
     });
 
-    $(".slider_home").slick();
+    $(".slider_home").slick({
+        dots: true,
+        infinite: true,
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false, 
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false
+    });
     $('.parallax-window').parallax();
 
     var instagramID = $("#instagram").html();
@@ -30,4 +40,5 @@ $(document).ready(function() {
 		});
 		userFeed.run();
 	}
+    AOS.init();
 });

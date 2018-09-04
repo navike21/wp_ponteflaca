@@ -35,6 +35,30 @@ body {
 }
 
 @media all and (min-width: 1px) {
+  .hide_movile {
+    display: none;
+  }
+
+  .hide_escritorio {
+    display: block;
+  }
+
+  .slick-dots {
+    bottom: 3vh;
+  }
+  .slick-dots li {
+    width: 5vw;
+    height: 5vw;
+    background-color: #2E2E2E;
+    border-radius: 50%;
+  }
+  .slick-dots li button {
+    opacity: 0;
+  }
+  .slick-dots .slick-active {
+    background-color: #91c100;
+  }
+
   .img_fondo {
     background-position: center;
     background-repeat: no-repeat;
@@ -55,22 +79,34 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 5vh auto 0;
     z-index: 10;
+    display: block;
+  }
+  nav section {
+    width: 100%;
+    display: block;
+    text-align: center;
   }
   nav .logo {
     width: 15%;
+    display: block;
+    margin: auto;
   }
   nav .logo img {
     width: 100%;
     height: auto;
+  }
+  nav .menu {
+    width: 100%;
+    padding: 0 0 4vw;
   }
   nav .menu li {
     display: inline-block;
     vertical-align: middle;
   }
   nav .menu li a {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: #434040;
     font-weight: 700;
     padding: 0 1vw;
@@ -79,9 +115,8 @@ body {
     color: #91c100;
   }
   nav aside {
-    border-left: 1px solid #91c100;
-    padding-left: 1.5vw;
-    margin-left: 1.5vw;
+    border-left: 0px solid #91c100;
+    width: 100%;
   }
   nav aside a {
     margin: 0 0.9vw;
@@ -90,13 +125,22 @@ body {
   nav aside a svg {
     height: 4vh;
     width: auto;
-    transition: all ease-in-out;
+    transition: all ease-in-out 0.3s;
   }
   nav aside a svg .rss_header {
     fill: #91c100;
+    transition: all ease-in-out 0.3s;
   }
   nav aside a svg .color_blanco {
     fill: #ffffff;
+    transition: all ease-in-out 0.3s;
+  }
+  nav aside a:hover svg {
+    transition: all ease-in-out 0.3s;
+  }
+  nav aside a:hover svg .rss_header {
+    fill: #B8D841;
+    transition: all ease-in-out 0.3s;
   }
   nav aside .suscribete svg {
     height: 5.5vh;
@@ -111,6 +155,14 @@ body {
     height: 100vh;
     background-size: auto 100%;
   }
+  .slider_home .img_fondo h3 {
+    font-family: "DJBMessyAmandaGoesBold";
+    font-size: 5rem;
+    width: 80%;
+    text-align: center;
+    line-height: 1;
+    margin-top: 40vw;
+  }
 
   .team {
     background-color: #ffffff;
@@ -119,7 +171,7 @@ body {
     padding: 5vh 0;
   }
   .team a {
-    width: 90%;
+    width: 100%;
     display: block;
     position: relative;
     overflow: hidden;
@@ -135,24 +187,19 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    width: 140%;
-    height: 70vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -20%;
+    left: 0;
     right: 0;
     margin: auto;
     transition: all ease-in-out 0.4s;
   }
   .team a::before {
-    background-image: url(../images/back-team.svg);
+    background-image: url(../images/back_team_responsive.svg);
     z-index: 1;
-  }
-  .team a::after {
-    background-image: url(../images/back-team_hover.svg);
-    opacity: 0;
-    z-index: 2;
   }
   .team a:hover::after {
     transition: all ease-in-out 0.4s;
@@ -204,12 +251,12 @@ body {
     padding: 5vh 0;
   }
   .brindamos article {
-    background-image: url(../images/brindamos.svg);
+    background-image: url(../images/brindamos_responsive.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    padding: 0 5vw 5vw;
-    width: 80%;
+    padding: 0 5vw 10vw;
+    width: 100%;
     margin: 5vw 0;
     position: relative;
   }
@@ -218,22 +265,34 @@ body {
     text-align: center;
     font-size: 3.5rem;
   }
+  .brindamos article .textwidget {
+    width: 70%;
+  }
   .brindamos article ul {
     list-style: disc;
     margin-left: 3vw;
+    width: 100%;
   }
   .brindamos article ul li {
     color: #ffffff;
     font-family: "Bariol-Regular";
     padding: 0.2vw 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 100;
   }
 
+  .title_blog h3 {
+    font-family: "DJBMessyAmandaGoesBold";
+    font-size: 10rem;
+  }
+
+  .blog .textwidget {
+    width: 80%;
+  }
   .blog h3 {
     font-size: 2.5rem;
     margin: 0;
-    width: 80%;
+    width: 100%;
     text-align: center;
     color: #91c100;
   }
@@ -282,17 +341,23 @@ body {
   }
 
   .conoce_ponteFlaca {
-    margin-top: 25vh;
+    margin-top: 1vw;
+  }
+  .conoce_ponteFlaca div {
+    width: 50%;
+  }
+  .conoce_ponteFlaca .textwidget {
+    width: 100%;
   }
   .conoce_ponteFlaca h2 {
     color: #434040;
-    font-size: 9rem;
+    font-size: 5rem;
     text-align: center;
     font-family: "DJBMessyAmandaGoesBold";
-    margin: 0;
+    margin-top: 57vw;
   }
   .conoce_ponteFlaca h3 {
-    font-size: 10rem;
+    font-size: 6rem;
     margin-bottom: 1vh;
     margin: 0;
     text-align: center;
@@ -300,32 +365,51 @@ body {
     font-family: "DJBMessyAmandaGoesBold";
   }
   .conoce_ponteFlaca h4 {
-    font-size: 2.7rem;
+    font-size: 1.7rem;
     text-align: center;
-    margin: 0;
+    margin-bottom: 30vw;
   }
   .conoce_ponteFlaca p {
-    font-size: 2.5rem;
+    font-family: "ScotiabankModern";
+    font-size: 1.5rem;
     text-align: justify;
     width: 90%;
-    margin-bottom: 5vh;
   }
   .conoce_ponteFlaca img {
-    width: 20%;
+    width: 100%;
+  }
+  .conoce_ponteFlaca .perfil_team {
+    width: 70vw;
+    height: 70vw;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .conoce_ponteFlaca article {
+    margin: 8vh 0;
+  }
+  .conoce_ponteFlaca article h3 {
+    font-size: 3rem;
+  }
+  .conoce_ponteFlaca .conoce_ponteFlaca:last-child {
+    margin-bottom: 0;
   }
 
   .blog_habitos h2 {
     font-family: "DJBMessyAmandaGoesBold";
     text-align: center;
     color: #91c100;
-    font-size: 8rem;
+    line-height: 1;
+    font-size: 4rem;
   }
   .blog_habitos p {
-    font-size: 2.5rem;
+    font-family: "ScotiabankModern";
+    font-size: 1.6rem;
     text-align: justify;
-    width: 70%;
+    width: 100%;
     margin-top: 5vh;
-    line-height: 5vh;
+  }
+  .blog_habitos img {
+    width: 100%;
   }
   .blog_habitos a {
     color: #ffffff;
@@ -333,33 +417,41 @@ body {
     background-color: #006A5B;
     padding: 2vh 6vh 2vh 6vh;
     border-radius: 2vh;
-    font-size: 2rem;
-    margin-top: 10vh;
+    font-size: 1.6rem;
+    margin: 5vh 0 5vh;
   }
 
   .habitos {
-    margin-top: 15vh;
+    margin-top: 35vh;
+  }
+  .habitos article {
+    margin-top: 5vw;
+    width: 80%;
   }
   .habitos h2 {
     font-family: "DJBMessyAmandaGoesBold";
     text-align: center;
     color: #91c100;
+    width: 46%;
+    line-height: 1;
   }
   .habitos div {
     margin-top: 10vh;
   }
   .habitos p {
-    font-size: 2.2rem;
-    margin-bottom: 6vh;
-    line-height: 3vw;
+    font-family: "ScotiabankModern";
+    font-size: 1.4rem;
+    margin-bottom: 4vh;
+    text-align: justify;
   }
   .habitos strong {
     color: #91c100;
-    font-size: 2.5rem;
-    line-height: 8vh;
+    font-size: 1.4rem;
+    line-height: 1.5;
   }
   .habitos h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    width: 100%;
   }
   .habitos a {
     color: #ffffff;
@@ -367,20 +459,26 @@ body {
     background-color: #006A5B;
     padding: 2vh 6vh 2vh 6vh;
     border-radius: 2vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 3vh;
+  }
+  .habitos a:hover {
+    background-color: #91c100;
   }
 
   section {
     width: 80%;
   }
 
+  .instagram {
+    background-color: #ffffff;
+  }
   .instagram .logo_instagram {
     width: 20%;
-    margin: 15vh 0 5vh;
+    margin: 2vw 0 5vh;
   }
   .instagram h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: -3vh;
   }
 
@@ -397,9 +495,11 @@ body {
 
   .formulario {
     background-color: #91c100;
+    position: relative;
+    z-index: 52;
   }
   .formulario h2 {
-    font-size: 5.5rem;
+    font-size: 3rem;
   }
   .formulario section {
     width: 80%;
@@ -418,7 +518,7 @@ body {
   .formulario section article p {
     margin: 1vw 0;
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: 1.4rem;
   }
   .formulario section article p a {
     color: #434040;
@@ -432,9 +532,15 @@ body {
   }
   .formulario section article aside a svg .rss_footer {
     fill: #ffffff;
+    transition: all ease-in-out 0.4s;
+  }
+  .formulario section article aside a:hover svg .rss_footer {
+    fill: #C6D147;
+    transition: all ease-in-out 0.4s;
   }
   .formulario section form {
     width: 100%;
+    margin-top: 5vw;
   }
   .formulario section form input,
   .formulario section form textarea {
@@ -444,6 +550,7 @@ body {
     font-family: "ScotiabankModern-Bold";
     font-weight: 700;
     margin-top: 1vh;
+    font-size: 1.8rem;
   }
   .formulario section form textarea {
     height: 8vw;
@@ -463,39 +570,158 @@ body {
   }
 
   .logo_footer {
+    background-color: #ffffff;
     padding: 5vh 0;
+    width: 80%;
+    position: relative;
+    z-index: 52;
   }
   .logo_footer img {
     width: 80%;
   }
-  .logo_footer .suscribete_footer img {
+  .logo_footer .suscribete_footer a svg {
     width: 60%;
+  }
+  .logo_footer .suscribete_footer a svg .rss_header {
+    fill: #91c100;
+    transition: all ease-in-out 0.3s;
+  }
+  .logo_footer .suscribete_footer a svg .color_blanco {
+    fill: #ffffff;
+    transition: all ease-in-out 0.3s;
+  }
+  .logo_footer .suscribete_footer a:hover svg .rss_header {
+    fill: #B8D841;
+    transition: all ease-in-out 0.3s;
   }
 
   .derechos {
     background-color: #2E2E2E;
-    padding: 2vh 2%;
+    padding: 6vh 2%;
     width: 96%;
     color: #ffffff;
     font-size: 1.4rem;
     font-family: "ScotiabankModern";
+    display: block;
+    text-align: center;
+    position: relative;
+    z-index: 52;
   }
   .derechos img {
-    width: 3%;
+    width: 10%;
+    display: block;
+    margin: 0 auto 4vw;
+  }
+
+  .whatsapp {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+    z-index: 99;
+    width: 3vw;
+  }
+  .whatsapp img {
+    width: 100%;
+    height: auto;
+  }
+
+  .up svg {
+    height: 20px;
+  }
+}
+@media all and (min-width: 760px) {
+  nav .menu li a {
+    font-size: 2.5rem;
+  }
+
+  .logo_footer {
+    width: 50%;
   }
 }
 @media all and (min-width: 1024px) {
+  .hide_movile {
+    display: block;
+  }
+
+  .hide_escritorio {
+    display: none;
+  }
+
+  .slick-dots li {
+    width: 1.3vw;
+    height: 1.3vw;
+  }
+
+  nav {
+    margin-top: 1vw;
+  }
+  nav section {
+    width: initial;
+  }
+  nav .logo {
+    margin: 0;
+  }
+  nav aside {
+    width: initial;
+    border-left-width: 1px;
+  }
+  nav aside a {
+    margin: 0 0.8vw;
+  }
+  nav aside .suscribete svg {
+    height: 5vh;
+  }
+  nav .menu {
+    width: initial;
+    padding: 0;
+  }
+  nav .menu li a {
+    font-size: 2rem;
+  }
+
   .slider_home .img_fondo {
     background-size: 100%;
+  }
+  .slider_home .img_fondo h3 {
+    font-size: 8.4rem;
+    width: 31%;
+    margin-top: 0;
   }
 
   .team a {
     width: 55%;
     overflow: inherit;
   }
+  .team a img {
+    width: 90%;
+  }
+  .team a::before,
+  .team a::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 140%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20%;
+    right: 0;
+    margin: auto;
+    transition: all ease-in-out 0.4s;
+  }
+  .team a::before {
+    background-image: url(../images/back-team.svg);
+  }
+  .team a::after {
+    background-image: url(../images/back-team_hover.svg);
+    opacity: 0;
+    z-index: 2;
+  }
 
   h2 {
-    font-size: 6rem;
+    font-size: 4.7rem;
   }
 
   .servicios {
@@ -509,9 +735,53 @@ body {
     height: 35vh;
   }
 
+  .conoce_ponteFlaca h2 {
+    margin-top: 13vw;
+    font-size: 8.4rem;
+    line-height: 1;
+    margin-bottom: 2vw;
+    width: 80%;
+  }
+  .conoce_ponteFlaca h3 {
+    font-size: 10rem;
+  }
+  .conoce_ponteFlaca h4 {
+    font-size: 3rem;
+    margin-bottom: 7vw;
+  }
+  .conoce_ponteFlaca img {
+    width: auto;
+    height: 100%;
+  }
+  .conoce_ponteFlaca .perfil_team {
+    width: 20vw;
+    height: 20vw;
+  }
+  .conoce_ponteFlaca p {
+    font-size: 1.5rem;
+  }
+  .conoce_ponteFlaca article {
+    width: 60%;
+    margin: 3vw 0;
+  }
+  .conoce_ponteFlaca article h3 {
+    font-size: 8rem;
+  }
+
   .brindamos article {
+    background-image: url(../images/brindamos.svg);
     width: 55%;
     background-size: 100% 100%;
+    padding-bottom: 5vw;
+  }
+  .brindamos article h3 {
+    font-size: 4.7rem;
+  }
+  .brindamos article ul {
+    width: 100%;
+  }
+  .brindamos article ul li {
+    font-size: 2.2rem;
   }
   .brindamos article::before,
   .brindamos article::after {
@@ -533,9 +803,22 @@ body {
     right: -25%;
   }
 
+  .portada_blog {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .title_blog h3 {
+    font-size: 21rem;
+  }
+
   .blog h3 {
     margin-top: -2vh;
     margin-bottom: 7vh;
+    font-size: 3rem;
   }
   .blog section {
     width: 70%;
@@ -549,13 +832,61 @@ body {
   }
   .blog section a h4 {
     display: flex;
+    font-size: 3rem;
+  }
+  .blog section a .contenido {
+    font-size: 1.5rem;
+  }
+
+  .habitos {
+    margin-top: 20vh;
+  }
+  .habitos article {
+    margin-top: 3vw;
+    width: 60%;
+  }
+  .habitos p {
+    font-size: 1.5rem;
+    margin-bottom: 1vw;
+    width: 100%;
+  }
+  .habitos strong {
+    font-size: 1.5rem;
+  }
+  .habitos h2 {
+    font-size: 8rem;
+  }
+
+  .portadas_blog {
+    width: 80%;
+  }
+
+  .blog_habitos h2 {
+    font-size: 8rem;
+    width: 65%;
+  }
+  .blog_habitos p {
+    font-size: 1.5rem;
+    width: 60%;
+    margin-top: 5vh;
+  }
+  .blog_habitos a {
+    font-size: 2rem;
+    margin: 3vw 0 2vw;
+    font-size: 1.5rem;
+  }
+  .blog_habitos img {
+    width: 60%;
+  }
+  .blog_habitos a:hover {
+    background-color: #91c100;
   }
 
   .instagram .logo_instagram {
     width: 7%;
   }
   .instagram h3 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   #instafeed {
@@ -565,17 +896,61 @@ body {
     width: 32%;
   }
 
+  .formulario h2 {
+    font-size: 4.7rem;
+  }
   .formulario section article,
   .formulario section form {
     width: 48%;
   }
+  .formulario section article input,
+  .formulario section form input {
+    padding: 1vw 1.5vw;
+  }
+  .formulario section article input[type=submit],
+  .formulario section form input[type=submit] {
+    width: 35%;
+  }
+  .formulario section article label,
+  .formulario section form label {
+    font-size: 2.2rem;
+  }
+  .formulario section article p {
+    font-size: 2.3rem;
+    width: 93%;
+  }
+  .formulario section form {
+    margin-top: 0;
+  }
 
+  .logo_footer {
+    width: 100%;
+  }
   .logo_footer img {
     width: 18%;
   }
-  .logo_footer .suscribete_footer img {
+  .logo_footer .suscribete_footer a svg {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     width: 11%;
-    margin-bottom: 2vh;
+  }
+
+  .derechos {
+    display: flex;
+    padding: 3vh 2%;
+  }
+  .derechos img {
+    width: 3%;
+    display: initial;
+    margin: 0;
+  }
+
+  .whatsapp:hover {
+    transform: scale(1.1);
+  }
+
+  .up svg {
+    height: 2.5vw;
   }
 }
 @media all and (min-width: 1280px) {
