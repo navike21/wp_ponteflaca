@@ -62,7 +62,7 @@ body {
     width: 15%;
   }
   nav .logo img {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
   nav .menu li {
@@ -474,7 +474,8 @@ body {
 
   .derechos {
     background-color: #2E2E2E;
-    padding: 2vh 2vw;
+    padding: 2vh 2%;
+    width: 96%;
     color: #ffffff;
     font-size: 1.4rem;
     font-family: "ScotiabankModern";
