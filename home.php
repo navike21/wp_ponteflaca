@@ -17,10 +17,12 @@
                     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                     $thumb_url = $thumb_url_array[0];
                     
-                    the_title('<h2>', '</h2>');
-                    echo '<img src="'.$thumb_url.'" width="90%">';
-                    the_excerpt();
-                    echo '<div class="section_bottom_center w_100">';
+                    the_title('<h2 data-aos-delay="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">', '</h2>');
+                    echo '<img src="'.$thumb_url.'" width="90%" data-aos-delay="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">';
+                    echo '<div  class="section_top_center" data-aos-delay="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">';
+                        the_excerpt();
+                    echo '</div>';
+                    echo '<div class="section_bottom_center w_100" data-aos-delay="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">';
                     echo '<a href="'; the_permalink(); echo '">Seguir Leyendo >>';
                     echo '</a>';
                     echo '</div>';
