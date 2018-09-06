@@ -69,7 +69,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 // Cargar Hojas de estilos
 function custom_css(){
-  wp_enqueue_style('bastemp', "http://bastemp.com/css/bastemp.min.css", false, '1.1.2', 'all');
+  wp_enqueue_style('bastemp', get_bloginfo('template_url')."/assets/css/bastemp.min.css", false, '1.1.2', 'all');
   wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", false, '1', 'all');
   wp_enqueue_style('slick', get_bloginfo('template_url')."/assets/plugins/slick/slick.css", false, '1', 'all');
   wp_enqueue_style('slick-theme', get_bloginfo('template_url')."/assets/plugins/slick/slick-theme.css", false, '1', 'all');
@@ -86,7 +86,7 @@ function custom_scripts() {
 
   // Registramos Bastemp
 	wp_deregister_script( 'bastemp' );
-	wp_register_script( 'bastemp', 'http://bastemp.com/js/bastemp.min.js', false, '1.1.2', false );
+	wp_register_script( 'bastemp', get_bloginfo('template_url').'/assets/js/bastemp.min.js', false, '1.1.2', false );
 	wp_enqueue_script( 'bastemp' );
 
   // Registramos Aos

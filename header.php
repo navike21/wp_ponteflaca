@@ -9,7 +9,7 @@
   </head>
   <body class="section_top_center">
       <header>
-          <nav class="section_middle_justify">
+          <nav class="section_middle_justify" id="topHome">
               <div class="logo" data-minwidth="200">
 				<?php  
 					if ( function_exists( 'the_custom_logo' ) ) {
@@ -29,7 +29,7 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'navegation' ) ); ?>
             	</div>
                   <aside class="section_middle_center">
-                      <a href="#">
+                      <a href="https://www.facebook.com/ponteflacaoficial/" target="_blank">
                           <!-- facebook -->
                           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                           	 viewBox="0 0 17.8 32.2" xml:space="preserve">
@@ -37,7 +37,7 @@
                           	c-4.2,0-7,2.5-7,7.2v4H0.9v5.5h4.7v14H11.3L11.3,31.5z"/>
                           </svg>
                       </a>
-                      <a href="#">
+                      <a href="https://www.instagram.com/Ponteflaca.oficial/" target="_blank">
                           <!-- Instagram -->
                           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                           	 viewBox="0 0 33.1 32.2" xml:space="preserve">

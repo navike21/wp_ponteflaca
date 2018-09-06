@@ -21,7 +21,7 @@
                     <!-- </div> -->
                     <h4>Síguenos también en:</h4>
                     <aside class="section_middle_left follow_to">
-                        <a href="#">
+                        <a href="https://www.instagram.com/Ponteflaca.oficial/" target="_blank">
                             <!-- Instagram -->
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 33.1 32.2" xml:space="preserve">
@@ -39,7 +39,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="https://www.facebook.com/ponteflacaoficial/" target="_blank">
                             <!-- facebook -->
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 17.8 32.2" xml:space="preserve">
