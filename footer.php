@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="section_top_center w_100">
     <a href="https://api.whatsapp.com/send?phone=+51949371522&text=Hola, quisiera ponerme en contacto con ustedes" target="_blank" class="whatsapp" data-minwidth="40"><img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/whatsapp.svg" alt=""></a>
     <section class="instagram section_top_center w_100">
     <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/instagram.svg" alt="Instagram" class="logo_instagram" data-minwidth="80">
