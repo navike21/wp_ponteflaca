@@ -49,19 +49,21 @@
                         </a>
                     </aside>
                 </article>
-                <form class="section_top_center" action="index.html" method="post">
+                <form class="section_top_center formulario form" id="formulario" data-nombre="formulario" data-destino="http://ponteflaca.pe/dataform/contact.php" action="index.html" method="post">
                     <label class="w_95">Nombre</label>
-                    <input type="text" name="" class="w_100">
+                    <input type="text" name="nombre" class="w_100 required">
                     <label class="w_95">Correo</label>
-                    <input type="text" name="" class="w_100">
+                    <input type="text" name="correo" class="w_100 required">
                     <label class="w_95">Asunto</label>
-                    <input type="text" name="" class="w_100">
+                    <input type="text" name="asunto" class="w_100 required">
                     <label class="w_95">Mensaje</label>
-                    <textarea name="name" rows="8" class="w_100"></textarea>
+                    <textarea name="mensaje" rows="8" class="w_100 required"></textarea>
                     <div class="section_top_center w_100">
                         <input type="submit" value="Enviar">
                     </div>
                 </form>
+                <input id="success_frm" type="hidden">
+                <div class="loading section_middle_center"></div>
             </section>
         </section>
         <div class="w_100 section_top_center logo_footer" data-aos-delay="500" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
