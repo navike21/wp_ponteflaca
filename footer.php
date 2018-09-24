@@ -51,13 +51,13 @@
                 </article>
                 <form class="section_top_center formulario form" id="formulario" data-nombre="formulario" data-destino="http://ponteflaca.pe/dataform/contact.php" action="index.html" method="post">
                     <label class="w_95">Nombre</label>
-                    <input type="text" name="" class="w_100">
+                    <input type="text" name="nombre" class="w_100">
                     <label class="w_95">Correo</label>
-                    <input type="text" name="" class="w_100">
+                    <input type="text" name="correo" class="w_100">
                     <label class="w_95">Asunto</label>
-                    <input type="text" name="" class="w_100">
+                    <input type="text" name="asunto" class="w_100">
                     <label class="w_95">Mensaje</label>
-                    <textarea name="name" rows="8" class="w_100"></textarea>
+                    <textarea name="mensaje" rows="8" class="w_100"></textarea>
                     <div class="section_top_center w_100">
                         <input type="submit" value="Enviar">
                     </div>
