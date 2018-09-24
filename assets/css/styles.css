@@ -678,7 +678,9 @@ body {
     font-size: 8.4rem;
     line-height: 1;
     margin-bottom: 2vw;
-    width: 80%; }
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto; }
   .conoce_ponteFlaca h3 {
     font-size: 10rem; }
   .conoce_ponteFlaca h4 {
@@ -746,13 +748,13 @@ body {
     width: 70%; }
     .blog section a {
       width: 46%;
-      margin: 0 0 10vh;
-      height: 5vh; }
+      margin: 0 0 10vh; }
       .blog section a .img_fondo {
         height: 30vh; }
       .blog section a h4 {
         display: flex;
-        font-size: 3rem; }
+        font-size: 3rem;
+        height: 5vh; }
       .blog section a .contenido {
         font-size: 1.5rem; }
 
