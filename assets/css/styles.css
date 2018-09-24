@@ -217,7 +217,7 @@ body {
         text-align: center;
         font-size: 3.5rem; }
       .brindamos article .textwidget {
-        width: 70%; }
+        width: 100%; }
       .brindamos article ul {
         list-style: disc;
         margin-left: 3vw;
@@ -659,7 +659,8 @@ body {
     width: 70%; }
     .blog section a {
       width: 46%;
-      margin: 0 0 10vh; }
+      margin: 0 0 10vh;
+      height: 5vh; }
       .blog section a .img_fondo {
         height: 30vh; }
       .blog section a h4 {
@@ -758,7 +759,7 @@ body {
     font-size: 58%; } }
 @media all and (min-width: 1400px) {
   html {
-    font-size: 65%; } }
+    font-size: 75%; } }
 @media all and (min-width: 1919px) {
   html {
     font-size: 89%; } }
