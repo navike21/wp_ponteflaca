@@ -1,10 +1,10 @@
 function show_loading() {
-    $(".loading").css('z-index', '99999').animate({ 'opacity': 1 }, 500);
+    $(".loading").css({'z-index': '99999', height: "100%"} ).animate({ 'opacity': 1 }, 500);
 }
 function hide_loading() {
     $(".loading").animate({ 'opacity': 0 }, 500);
     setTimeout(function () {
-        $(".loading").css('z-index', '-1');
+        $(".loading").css({'z-index': '-1', height: "0%"});
     }, 600);
 }
 
