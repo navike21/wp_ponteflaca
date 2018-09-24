@@ -145,7 +145,7 @@ add_action( 'widgets_init', 'info_footer' );
 //SECTION CREDITS FOOTER
 function credits() {
 	register_sidebar( array(
-		'name'          => 'Credits Footer',
+		'name'          => 'Creditos Footer',
 		'id'            => 'credits',
 		'before_widget' => '<div class="align_center">',
 		'after_widget'  => '</div>',
@@ -186,7 +186,7 @@ add_action( 'widgets_init', 'brindamos_title' );
 //Titulo de blog
 function blog_title() {
 	register_sidebar( array(
-		'name'          => 'Title blog',
+		'name'          => 'Titulo blog home',
 		'id'            => 'blog_title',
 		'before_widget' => '<section class="blog section_top_center w_100">',
 		'after_widget'  => '</section>',
@@ -321,6 +321,19 @@ function portada_blog() {
 	) );
 }
 add_action( 'widgets_init', 'portada_blog' );
+
+//titulo_de_blog
+function titulo_de_blog() {
+	register_sidebar( array(
+		'name'          => 'Titulo de Blog',
+		'id'            => 'titulo_de_blog',
+		'before_widget' => '<section class="section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="images/images_wp/sliderBLOG.jpg">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'titulo_de_blog' );
 
 
 ?>
