@@ -35,7 +35,7 @@ body {
 }
 
 @media all and (min-width: 1px) {
-  .loading {
+.loading {
     background-color: white;
     position: fixed;
     top: 0;
@@ -129,7 +129,6 @@ body {
     animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
     animation-iteration-count: 1;
   }
-
   .hide_movile {
     display: none;
   }
@@ -315,7 +314,7 @@ body {
   .servicios article .img_fondo {
     height: 20vh;
     position: relative;
-    background-size: auto 100%;
+    background-size: auto 120%;
   }
   .servicios article .img_fondo::before {
     background-color: #B8D841;
@@ -361,7 +360,7 @@ body {
     font-size: 3.5rem;
   }
   .brindamos article .textwidget {
-    width: 100%;
+    width: 70%;
   }
   .brindamos article ul {
     list-style: disc;
@@ -379,9 +378,6 @@ body {
   .title_blog h3 {
     font-family: "DJBMessyAmandaGoesBold";
     font-size: 10rem;
-    position: absolute;
-    width: 60%;
-    right: 0;
   }
 
   .blog .textwidget {
@@ -839,8 +835,6 @@ body {
     line-height: 1;
     margin-bottom: 2vw;
     width: 80%;
-    margin-right: auto;
-    margin-left: auto;
   }
   .conoce_ponteFlaca h3 {
     font-size: 10rem;
@@ -873,9 +867,6 @@ body {
     width: 55%;
     background-size: 100% 100%;
     padding-bottom: 5vw;
-  }
-  .brindamos article .textwidget {
-    width: 100%;
   }
   .brindamos article h3 {
     font-size: 4.7rem;
@@ -936,7 +927,6 @@ body {
   .blog section a h4 {
     display: flex;
     font-size: 3rem;
-    height: 5vh;
   }
   .blog section a .contenido {
     font-size: 1.5rem;
@@ -1059,36 +1049,36 @@ body {
 }
 @media all and (min-width: 1280px) {
   html {
-    font-size: 68%;
+    font-size: 58%;
   }
 }
 @media all and (min-width: 1400px) {
   html {
-    font-size: 75%;
+    font-size: 65%;
   }
 }
 @media all and (min-width: 1919px) {
   html {
-    font-size: 95%;
+    font-size: 89%;
   }
 }
 @media all and (min-width: 2559px) {
   html {
-    font-size: 130%;
+    font-size: 118%;
   }
 }
 @media all and (min-width: 5120px) {
   html {
-    font-size: 260%;
+    font-size: 237%;
   }
 }
 @media all and (min-width: 7680px) {
   html {
-    font-size: 390%;
+    font-size: 356%;
   }
 }
 @media all and (min-width: 8192px) {
   html {
-    font-size: 400%;
+    font-size: 380%;
   }
 }

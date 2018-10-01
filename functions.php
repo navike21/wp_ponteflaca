@@ -145,7 +145,7 @@ add_action( 'widgets_init', 'info_footer' );
 //SECTION CREDITS FOOTER
 function credits() {
 	register_sidebar( array(
-		'name'          => 'Creditos Footer',
+		'name'          => 'Credits Footer',
 		'id'            => 'credits',
 		'before_widget' => '<div class="align_center">',
 		'after_widget'  => '</div>',
@@ -186,7 +186,7 @@ add_action( 'widgets_init', 'brindamos_title' );
 //Titulo de blog
 function blog_title() {
 	register_sidebar( array(
-		'name'          => 'Titulo blog home',
+		'name'          => 'Title blog',
 		'id'            => 'blog_title',
 		'before_widget' => '<section class="blog section_top_center w_100">',
 		'after_widget'  => '</section>',
@@ -314,26 +314,13 @@ function portada_blog() {
 	register_sidebar( array(
 		'name'          => 'Portada Blog',
 		'id'            => 'portada_blog',
-		'before_widget' => '<section class="section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="images/images_wp/sliderBLOG.jpg">',
+		'before_widget' => '<section class="section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="http://ponteflaca.pe/wp-content/uploads/2018/09/sliderBLOG.jpg">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2>',
+		'before_title'  => '<h2 class="section_middle_center" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; font-family: DJBMessyAmandaGoesBold; font-size: 20rem;">',
 		'after_title'   => '</h2>',
 	) );
 }
 add_action( 'widgets_init', 'portada_blog' );
-
-//titulo_de_blog
-function titulo_de_blog() {
-	register_sidebar( array(
-		'name'          => 'Titulo de Blog',
-		'id'            => 'titulo_de_blog',
-		'before_widget' => '<section class="section_top_center w_100 parallax-container full_min_h" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="images/images_wp/sliderBLOG.jpg">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	) );
-}
-add_action( 'widgets_init', 'titulo_de_blog' );
 
 
 ?>
