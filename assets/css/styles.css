@@ -699,7 +699,7 @@ body {
     display: block;
     text-align: center;
     position: relative;
-    z-index: 52;
+    z-index: 99;
   }
   .derechos img {
     width: 10%;
