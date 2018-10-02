@@ -1046,6 +1046,10 @@ body {
   .up svg {
     height: 2.5vw;
   }
+
+  .brindamos article .textwidget{
+    width: 70%
+  }
 }
 @media all and (min-width: 1280px) {
   html {
