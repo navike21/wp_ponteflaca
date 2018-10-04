@@ -1048,7 +1048,7 @@ body {
   }
 
   .brindamos article .textwidget{
-    width: 70%
+    width: 100%
   }
 }
 @media all and (min-width: 1280px) {
