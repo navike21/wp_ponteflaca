@@ -73,7 +73,7 @@ function custom_css(){
   wp_enqueue_style('aos', "https://unpkg.com/aos@2.3.1/dist/aos.css", false, '1', 'all');
   wp_enqueue_style('slick', get_bloginfo('template_url')."/assets/plugins/slick/slick.css", false, '1', 'all');
   wp_enqueue_style('slick-theme', get_bloginfo('template_url')."/assets/plugins/slick/slick-theme.css", false, '1', 'all');
-  wp_enqueue_style('style', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.4.7', 'all');
+  wp_enqueue_style('style', get_bloginfo('template_url')."/assets/css/styles.min.css", false, '1.4.8', 'all');
 }
 add_action('wp_print_styles', 'custom_css');
 
