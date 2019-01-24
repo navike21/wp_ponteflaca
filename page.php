@@ -8,6 +8,6 @@
 </section>
 <?php endif; ?>
 <!-- Archivo de barra lateral por defecto -->
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <!-- Archivo de pié global de Wordpress -->
 <?php get_footer(); ?>
