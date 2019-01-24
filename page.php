@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <!-- Contenido de página de inicio -->
 <?php if ( have_posts() ) : the_post(); ?>
-<section class="conoce_ponteFlaca section_top_center w_100" style="margin-top: 100px;">
+<section class="conoce_ponteFlaca section_top_center w_100" style="margin-top: 10vh;">
   <h1><?php the_title(); ?></h1>
   <?php the_content(); ?>
 </section>
