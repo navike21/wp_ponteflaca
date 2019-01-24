@@ -9,7 +9,8 @@
       echo '<article class="section_top_justify">';
         the_content();
         echo '<div class="section_bottom_center w_100">';
-        echo '<a href="'; the_permalink(); echo'">Enviar >>'; echo '</a>';
+        comments_template();
+        // echo '<a href="'; the_permalink(); echo'">Enviar >>'; echo '</a>';
         echo '<div>';
       echo '</aticle>';
     echo '</section>';
