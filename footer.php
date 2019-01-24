@@ -70,7 +70,7 @@
             <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/logo.png" alt="">
             <div class="w_100 align_center suscribete_footer">
                 <!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/suscribete.svg" alt=""> -->
-                <a href="">
+                <a href="/suscribe">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         	 viewBox="0 0 150.7 41.5"  xml:space="preserve">
                             <g>
