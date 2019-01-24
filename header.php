@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
+	<script src='https://www.google.com/recaptcha/api.js?render=6Ld8KYwUAAAAAJj7f0cTk5HSFsbxyphWwemdjY0i'></script>
     <?php wp_head(); ?>
   </head>
   <body class="section_top_center">
