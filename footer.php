@@ -152,7 +152,7 @@
         </div>
 
         <div class="derechos section_middle_justify w_100">
-            <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/lengua.svg" alt="">     
+            <!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/lengua.svg" alt="">      -->
             <div class="credits">
                 <?php
                     if ( is_active_sidebar( 'credits' ) ) {
