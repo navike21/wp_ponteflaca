@@ -151,7 +151,7 @@
             </a>
         </div>
 
-        <div class="derechos section_middle_justify w_100">
+        <div class="derechos section_middle_center w_100" style="font-size: 1rem;">
             <!-- <img src="<?php echo get_bloginfo('template_url'); ?>/assets/images/lengua.svg" alt="">      -->
             <div class="credits">
                 <?php
