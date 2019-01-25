@@ -8,10 +8,10 @@
       echo '<section class="section_top_center portadas_blog parallax-container" data-speed=".5" data-parallax="scroll" data-position="center" data-image-src="'; the_post_thumbnail_url();echo '">'; echo '</section>';
       echo '<article class="section_top_justify">';
         the_content();
-        echo '<div class="comentarios w_100">';
+        echo '<section class="comentarios w_100">';
         // echo '<a href="'; the_permalink(); echo'">Enviar >>'; echo '</a>';
           comments_template();
-        echo '<div>';
+        echo '<section>';
       echo '</aticle>';
     endif;    
   echo '</section>';
