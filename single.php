@@ -11,7 +11,7 @@
         echo '<section class="comentarios w_100">';
         // echo '<a href="'; the_permalink(); echo'">Enviar >>'; echo '</a>';
           comments_template();
-        echo '<section>';
+        echo '</section>';
       echo '</aticle>';
     endif;    
   echo '</section>';
